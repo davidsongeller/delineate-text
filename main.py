@@ -1,31 +1,13 @@
-def format_input(input_string, max_width):
-    words = input_string.split()
-    output_lines = []
-    line = ""
-    for word in words:
-        if len(line + word) < max_width:
-            line += word + " "
-        else:
-            output_lines.append(line.rstrip())
-            line = word + " "
-    output_lines.append(line.rstrip())
-    final_output = ""
-    for line in output_lines:
-        if line.endswith(","):
-            final_output += line[:-1] + "\n"
-        else:
-            final_output += line + "\n"
-    return final_output
+import textwrap
 
-input_string = input("Enter a long line of text: ")
-while True:
-    max_width_input = input("Enter the maximum width for each line: ")
-    if max_width_input.isdigit():
-        max_width = int(max_width_input)
-        break
-    else:
-        print("Invalid input. Please enter a valid integer.")
+# Get input from user
+long_text = input("Enter a long line of text: ")
 
-formatted_input = format_input(input_string, max_width)
+# Define maximum width for shorter lines
+width = 40
 
-print(formatted_input)
+# Wrap long text into shorter lines
+wrapped_text = textwrap.fill(long_text, width=width, replace_whitespace=False)
+
+# Print the wrapped text
+print(wrapped_text)
