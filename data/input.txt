@@ -1,1 +1,5 @@
+Enter a long line of text: 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur felis at tristique dictum. Sed vel odio lectus. Praesent vestibulum, nisi vel consequat consequat, sapien est luctus arcu, eget finibus odio enim quis mauris.
+
+Enter the maximum width for each line: 
+40
